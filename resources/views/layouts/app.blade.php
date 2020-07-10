@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <title>@yield('page') :: {{ config('app.name', 'LG-Ticket') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="refresh" content="600">
     <meta name="copyright" content="Copyright © 2019 - 2020 by IT Longhi Group.">
@@ -11,8 +12,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="shortcut icon" href="https://longhi-group.com/wp-content/uploads/2017/09/favicon.png">
-
-    <title>@yield('page') :: {{ config('app.name', 'LG-Ticket') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
