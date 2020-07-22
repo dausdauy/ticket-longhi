@@ -54,10 +54,11 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <div class="g-recaptcha @error('captcha') is-invalid @enderror" data-sitekey="6Lcp8a4ZAAAAAECdwerUt0vqFTYS5ZJiWsnUMzn8" require></div>
-                                @error('captcha')
+                                <div class="g-recaptcha @error('g-recaptcha-response') is-invalid @enderror" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
+                                
+                                @error('g-recaptcha')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ __('Please Check Me!!') }}</strong>
+                                        <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
