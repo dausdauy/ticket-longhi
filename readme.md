@@ -1,6 +1,6 @@
-# Ticketit app
+# Ticket it-longhi app
 
-This is a Laravel 5.8 application with [Ticketit](https://github.com/thekordy/ticketit) pre-installed in it. This is meant to make installation of Ticketit as quick as possible and easier for those who are not familiar with Laravel.
+This is a Laravel 5.8 application ticket for our company, this app customize from [Ticketit](https://github.com/thekordy/ticketit) pre-installed in it. This is meant to make installation of Ticketit as quick as possible and easier for those who are not familiar with Laravel.
 
 Install this only if you'd like to install Ticketit as a standalone app. If you'd like to integrate Ticketit to your existing Laravel project, follow the manual [installation guide](https://github.com/thekordy/ticketit#installation-manual) of the Ticketit repository.
 
