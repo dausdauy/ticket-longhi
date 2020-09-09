@@ -6,10 +6,12 @@
     "type": "project",
     "require": {
         "php": "^7.2",
+        "barryvdh/laravel-dompdf": "^0.8.6",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.5",
         "kordy/ticketit": "^0.4",
         "laravel/framework": "^6.0",
+        "laravel/scout": "^8.2",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
