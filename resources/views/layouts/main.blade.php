@@ -25,15 +25,14 @@
                     margin: 0;
         }
             .m-t-hg {
-                    bottom: 0px;
-                    position: fixed;
                     text-align: center;
-                    left: 0;
                     color: #fff;
                     padding : 15px;
                     width: 100%;
                     background-color: #243a5c;
-                    z-index: 1001;
+                    z-index:1000;
+                    position: fixed;
+                    bottom: 0;
             }
         </style>
         @stack('style')
@@ -43,9 +42,8 @@
     </head>
     <body>
         @include('layouts.knowledge.nav')
-
             <main class="py-4">
-                <div class="container" style="max-width: 925px;margin-bottom: 40px;">
+                <div class="container" style="max-width: 925px;margin-bottom: 3rem;">
                     @yield('content')
                 </div>
             </main>

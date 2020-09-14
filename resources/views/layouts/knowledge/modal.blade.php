@@ -1,6 +1,6 @@
-<!-- Modal -->
+<!-- Modal Material-->
 <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Form Input</h5>
@@ -21,9 +21,9 @@
                 <label for="formGroupExampleInput2">Category</label>
                 <select class="form-control" required name="category">
                     <option Selected disabled>Choose</option>
-                @foreach($categories as $category)
-                    <option value="{{$category->id}}">{{$category->name_categories}}</option>
-                @endforeach
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->name_categories}}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group">
@@ -45,7 +45,7 @@
 
 <!-- Modal Category-->
 <div class="modal fade" id="ModalAdd1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>

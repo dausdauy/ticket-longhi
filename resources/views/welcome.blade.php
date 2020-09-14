@@ -22,9 +22,6 @@
                     <a href="#" class="btn btn-primary btn-lg">About Us</a>
                 </div>
 
-                <div class="subtitle m-t-hg">
-                    Powered by IT Longhi Group &copy 2020
-                </div>
             </div>
         </div>
 

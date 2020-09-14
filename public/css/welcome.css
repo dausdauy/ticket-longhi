@@ -8,12 +8,6 @@
     position: relative;
 }
 
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
-}
-
 .content {
     text-align: center;
 }
@@ -49,9 +43,4 @@
     font-weight: 200;
     font-size: xx-large;
     font-style: italic;
-}
-
-.version {
-    font-size: 0.4em;
-    position: absolute;
 }
