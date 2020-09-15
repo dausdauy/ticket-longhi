@@ -15,18 +15,16 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Auth::routes();
+Route::group(['middleware' => ['auth']], function (){
+	// Custom URL for Admin use Auth, put should be first
+	Route::get('/knowledges/admin', ['as' => 'knowledges.admin', 'uses' => 'KnowledgeController@admin']);
+	Route::get('/knowledges/admin_category', ['as' => 'categories.index', 'uses' => 'CategoryController@index']);
+});
 
-// Custom URL resource
-Route::get('/knowledges/admin', ['as' => 'knowledges.index', 'uses' => 'KnowledgeController@index']);
-Route::get('/knowledges/admin_category', ['as' => 'categories.index', 'uses' => 'CategoryController@index']);
-Route::get('/knowledges/dashboard', ['as' => 'knowledges.dashboard', 'uses' => 'KnowledgeController@dashboard']);
-
-// Route Resource
 Route::resource('knowledges', 'KnowledgeController');
-// Route Category
 Route::resource('categories', 'CategoryController');
 
+Auth::routes();
 Route::get('/home', function(){
 	return redirect(action('\Kordy\Ticketit\Controllers\TicketsController@index'));
 });

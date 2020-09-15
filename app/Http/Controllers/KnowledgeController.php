@@ -18,10 +18,10 @@ class KnowledgeController extends Controller
     public function index()
     {
         $categories = Category::all();
-        $knowledges = Knowledge::join('categories', 'knowledge.category', '=', 'categories.id')->get();
+        $kgroups = Category::rightjoin('knowledge', 'knowledge.category', '=', 'categories.id')->get();
         // dd($kgroups);
                             
-        return view('layouts.knowledge.admin', ['knowledges'=>$knowledges, 'categories'=>$categories]);
+        return view('layouts.knowledge.body', ['kgroups'=>$kgroups, 'categories'=>$categories]);
     }
 
     /**
@@ -29,15 +29,15 @@ class KnowledgeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function dashboard()
+    public function admin()
     {
         $categories = Category::all();
-        $kgroups = Category::rightjoin('knowledge', 'knowledge.category', '=', 'categories.id')->get();
+        $knowledges = Knowledge::join('categories', 'knowledge.category', '=', 'categories.id')->get();
         // dd($kgroups);
                             
-        return view('layouts.knowledge.body', ['kgroups'=>$kgroups, 'categories'=>$categories]);
+        return view('layouts.knowledge.admin', ['knowledges'=>$knowledges, 'categories'=>$categories]);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *

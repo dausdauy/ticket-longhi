@@ -22,13 +22,13 @@
     <style>
         body{
             background: url('{{ asset('lg_bg1.png') }}') no-repeat center center fixed; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                margin: 0;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
         }
-    </style>
+        </style>
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -72,10 +72,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
-                                    <a class="dropdown-item" href="{{ route('knowledges.dashboard') }}" target="_blank">
+                                    <a class="dropdown-item" href="{{ route('knowledges.index') }}" target="_blank">
                                         {{ __('Dashboard') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('knowledges.index') }}" target="_blank">
+                                    <a class="dropdown-item" href="{{ route('knowledges.admin') }}" target="_blank">
                                         {{ __('Admin') }}
                                     </a>
                                 </div>

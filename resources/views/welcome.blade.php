@@ -18,7 +18,7 @@
 
                 <div class="links">
                     <a href="{{ route('login') }}" target="_blank" class="btn btn-primary btn-lg">Ticket System</a>
-                    <a href="{{ url('/knowledges/dashboard') }}" target="_blank" class="btn btn-primary btn-lg">Knowledge Base</a>
+                    <a href="{{ route('knowledges.index') }}" target="_blank" class="btn btn-primary btn-lg">Knowledge Base</a>
                     <a href="#" class="btn btn-primary btn-lg">About Us</a>
                 </div>
 
