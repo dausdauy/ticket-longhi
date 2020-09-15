@@ -17,19 +17,22 @@
                         </li>
                     @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/home') }}">{{ __('Ticket') }}</a>
+                                <a class="nav-link" href="{{ url('/') }}">{{ __('Portal') }}</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown2" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ __('Portal') }} <span class="caret"></span>
+                            <a id="navbarDropdown2" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" data-placement="bottom" title="Knowledge Base"  aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Setting') }} <span class="caret"></span>
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown2">
                                 <a class="dropdown-item" href="{{ route('knowledges.index') }}" target="_blank">
-                                    {{ __('Dashboard') }}
+                                    {{ __('Dashboard View') }}
                                 </a>
                                 <a class="dropdown-item" href="{{ route('knowledges.admin') }}" target="_blank">
-                                    {{ __('Admin') }}
+                                    {{ __('Material') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('categories.index') }}" target="_blank">
+                                    {{ __('Category') }}
                                 </a>
                             </div>
                         </li>
