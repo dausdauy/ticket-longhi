@@ -32,7 +32,7 @@ class KnowledgeController extends Controller
     public function admin()
     {
         $categories = Category::all();
-        $knowledges = Knowledge::join('categories', 'knowledge.category', '=', 'categories.id')->get();
+        $knowledges = Category::rightjoin('knowledge', 'knowledge.category', '=', 'categories.id')->get();
         // dd($kgroups);
                             
         return view('layouts.knowledge.admin', ['knowledges'=>$knowledges, 'categories'=>$categories]);
@@ -121,10 +121,9 @@ class KnowledgeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
+    {   
         $file = Knowledge::where('id',$id)->value('file');
         File::delete(public_path('uploads/'.$file));
-
         Knowledge::where('id',$id)->delete();
         
         return redirect()->back()->with('danger', $file.' has been Deleted.');
